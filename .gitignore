@@ -1,0 +1,10 @@
+node_modules/
+.wrangler/
+.dev.vars
+
+# The seeded Claude Design canvas (~2 MB, mostly editor boilerplate) is
+# regenerable from design-canvas/Main.dc.html + canvas.json via the design
+# skill's seed-canvas.mjs helper — no need to carry it in git history.
+# (Main.dc.html itself is the source and IS tracked — only the seeded
+# watabook-marketing-site.html output is excluded.)
+design-canvas/watabook-marketing-site.html

@@ -1,0 +1,4 @@
+# Cloudflare Pages redirects.
+# Collapse /index.html to the clean directory form (matches <link rel="canonical">)
+/index.html        /       301
+/fr/index.html     /fr/    301
