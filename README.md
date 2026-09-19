@@ -1,6 +1,6 @@
 # watabook.devandrepair.com
 
-Marketing site for [Watabook](https://github.com/Hassan-Boulhilt/watabook) —
+Marketing site for [Watabook](https://github.com/Hassan-Boulhilt/watabook_site) —
 the offline car-maintenance logbook & fault-code app. Vanilla HTML5 / CSS3 /
 JS, deployed as a static site to Cloudflare Pages (same pattern as the other
 `*.devandrepair.com` sites — no build step, no framework).
