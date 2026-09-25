@@ -24,17 +24,35 @@ index.html            Home (en) — hero, features, pricing
 privacy.html           Privacy policy (en)
 terms.html             Terms of service (en)
 support.html           Support / FAQ (en)
-fr/                     French versions of the above — the app's Wave-1 locale
-css/style.css           Design tokens + all page styles
-js/script.js            Mobile-nav toggle only — no scroll gimmicks
+fr/                     French versions of the above (hand-written)
+ar/ de/ es/ pt/ it/     Generated — do not edit by hand (see "Languages")
+css/style.css           Design tokens + all page styles (logical properties, so RTL works)
+js/script.js            Mobile-nav toggle + language dropdown — no scroll gimmicks
+tools/                  build_locales.py + i18n/<code>.py (the translations)
 assets/                 Favicons, apple-touch-icon, OG/social image
                         (generated from store/icon/watabook-icon-1024.png
                         in the app repo)
 ```
 
-Only `en` and `fr` exist so far, matching `store/screenshots.md`'s "Wave 1 =
-fr/en" in the app repo. `ar`/`de`/`es`/`pt`/`it` are a natural fast-follow —
-duplicate a locale folder, translate, add hreflang + sitemap entries.
+## Languages
+
+All 7 app locales are covered: en and fr (hand-written pages), and ar, de, es,
+pt (pt-PT) and it (generated). Edit a translation in `tools/i18n/<code>.py`, then:
+
+```bash
+python tools/build_locales.py        # all five generated languages
+python tools/build_locales.py de     # or just one
+```
+
+That rewrites `<code>/*.html`, re-applies the shared language switcher and the
+`hreflang` block to the hand-written en/fr pages, and regenerates
+`sitemap.xml` and the locale lines of `_redirects`. It is idempotent. Arabic
+renders right-to-left (`dir="rtl"`, IBM Plex Sans Arabic).
+
+The privacy/terms/support translations are AI drafts of the English originals
+and carry an "English prevails" note — have a native / legal reader review
+them before relying on them. To change wording in en/fr, edit those pages
+directly; to add a section everywhere, edit all seven.
 
 ## Local preview
 

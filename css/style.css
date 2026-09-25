@@ -254,7 +254,7 @@ img { max-width: 100%; display: block; }
 .plan .badge {
   position: absolute;
   top: -12px;
-  right: 28px;
+  inset-inline-end: 28px;
   background: var(--accent);
   color: var(--accent-ink);
   font-size: 10px;
@@ -269,8 +269,8 @@ img { max-width: 100%; display: block; }
 .plan-price span { font-size: 14px; font-weight: 500; color: var(--ink-3); font-family: var(--font-sans); }
 .plan-sub { font-size: 12.5px; color: var(--ink-3); margin-bottom: 20px; }
 .plan ul { display: flex; flex-direction: column; gap: 10px; margin-bottom: 26px; }
-.plan li { font-size: 13.5px; color: var(--ink-2); padding-left: 20px; position: relative; line-height: 1.5; }
-.plan li::before { content: ""; position: absolute; left: 0; top: 6px; width: 8px; height: 8px; border-radius: 2px; background: var(--hairline); }
+.plan li { font-size: 13.5px; color: var(--ink-2); padding-inline-start: 20px; position: relative; line-height: 1.5; }
+.plan li::before { content: ""; position: absolute; inset-inline-start: 0; top: 6px; width: 8px; height: 8px; border-radius: 2px; background: var(--hairline); }
 .plan.pro li::before { background: var(--accent); }
 .price-note { text-align: center; font-size: 12px; color: var(--ink-3); margin-top: 18px; }
 
@@ -295,12 +295,12 @@ footer { border-top: 1px solid var(--hairline); padding: 40px 0; }
 .legal-body h2:first-child { margin-top: 0; }
 .legal-body h3 { font-size: 15px; font-weight: 600; margin: 24px 0 8px; }
 .legal-body p { color: var(--ink-2); line-height: 1.75; margin: 0 0 14px; font-size: 14.5px; }
-.legal-body ul, .legal-body ol { margin: 8px 0 16px 20px; display: flex; flex-direction: column; gap: 8px; }
+.legal-body ul, .legal-body ol { margin: 8px 0 16px; margin-inline-start: 20px; display: flex; flex-direction: column; gap: 8px; }
 .legal-body li { color: var(--ink-2); font-size: 14px; line-height: 1.65; }
 .legal-body li::marker { color: var(--accent); }
 .toc { background: var(--surface); border: 1px solid var(--hairline); border-radius: var(--r-lg); padding: 24px 28px; margin-bottom: 36px; }
 .toc h3 { font-weight: 600; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-3); margin: 0 0 14px; }
-.toc ol { margin: 0 0 0 18px; display: flex; flex-direction: column; gap: 6px; }
+.toc ol { margin: 0; margin-inline-start: 18px; display: flex; flex-direction: column; gap: 6px; }
 .toc a { font-size: 13.5px; }
 .note-box { background: var(--accent-tint); border: 1px solid var(--hairline); border-radius: var(--r-lg); padding: 18px 22px; margin: 20px 0; }
 .note-box p { margin: 0; color: var(--ink); font-size: 13.5px; }
@@ -359,3 +359,94 @@ footer { border-top: 1px solid var(--hairline); padding: 40px 0; }
   border-bottom: 1px solid var(--hairline);
 }
 .mobile-sheet .btn { width: 100%; margin-top: 20px; }
+
+/* ---------- language switcher (no JS needed: <details>) ---------- */
+.lang-switch { position: relative; }
+.lang-switch summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex; /* block-level: an inline-flex box baselines on its svg and sits ~2px high */
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink-2);
+}
+.lang-switch summary::-webkit-details-marker { display: none; }
+.lang-switch summary:hover, .lang-switch details[open] summary { color: var(--ink); }
+.lang-switch summary svg { width: 16px; height: 16px; }
+.lang-switch details > ul {
+  position: absolute;
+  inset-inline-end: 0;
+  top: calc(100% + 12px);
+  min-width: 160px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 8px;
+  background: var(--raised);
+  border: 1px solid var(--hairline);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-card);
+}
+.lang-switch details > ul a {
+  display: block;
+  padding: 8px 12px;
+  border-radius: var(--r-sm);
+  font-size: 14px;
+  color: var(--ink-2);
+}
+.lang-switch details > ul a:hover { background: var(--accent-tint); color: var(--ink); }
+.lang-switch details > ul a[aria-current="true"] { color: var(--accent); font-weight: 600; }
+
+.mobile-sheet .lang-row { display: flex; flex-wrap: wrap; gap: 8px; padding: 16px 0 4px; }
+.mobile-sheet .lang-row a {
+  display: inline-block;
+  padding: 8px 14px;
+  font-size: 14px;
+  border: 1px solid var(--hairline);
+  border-radius: var(--r-md);
+}
+.mobile-sheet .lang-row a[aria-current="true"] { border-color: var(--accent); color: var(--accent); }
+
+.foot-langs { display: flex; flex-wrap: wrap; gap: 8px 18px; width: 100%; padding-top: 4px; }
+.foot-langs a { font-size: 12.5px; color: var(--ink-3); }
+.foot-langs a:hover { color: var(--ink); }
+.foot-langs a[aria-current="true"] { color: var(--ink-2); font-weight: 600; }
+
+/* ---------- right-to-left (Arabic) ---------- */
+/* Spectral / IBM Plex Sans have no Arabic glyphs; IBM Plex Sans Arabic is
+   loaded on ar pages only and takes over both the sans and serif roles. */
+[dir="rtl"] {
+  --font-sans: 'IBM Plex Sans Arabic', 'IBM Plex Sans', system-ui, sans-serif;
+  --font-serif: 'IBM Plex Sans Arabic', 'Spectral', Georgia, serif;
+}
+/* Letter-spacing breaks Arabic letter joining. */
+[dir="rtl"] .kicker, [dir="rtl"] .sec-label, [dir="rtl"] .store-btn .l1,
+[dir="rtl"] .plan .badge, [dir="rtl"] .toc h3, [dir="rtl"] .meter-label,
+[dir="rtl"] .hero h1, [dir="rtl"] .wordmark { letter-spacing: 0; }
+[dir="rtl"] .back-nav svg { transform: scaleX(-1); }
+/* Latin figures/units inside Arabic runs (900 km, EUR prices) stay readable. */
+[dir="rtl"] .mono { unicode-bidi: plaintext; }
+
+/* Mixed Latin/number tokens keep their own left-to-right order inside Arabic. */
+[dir="rtl"] .sec-num, [dir="rtl"] .foot-copy, [dir="rtl"] .chip-code {
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
+/* backdrop-filter turns .nav into the containing block for its position:fixed
+   child, which collapsed the mobile menu (inset: 72px 0 0 0) to zero height.
+   The menu is phone-only, so the blur is dropped there. */
+@media (max-width: 860px) {
+  .nav { backdrop-filter: none; -webkit-backdrop-filter: none; background: var(--ground); }
+}
+/* `.mobile-sheet a` (menu rows) out-ranks `.btn-primary`, giving the Download
+   button dark, bottom-aligned text — restore the button's own look in the sheet. */
+.mobile-sheet a.btn {
+  display: flex;
+  padding: 0 22px;
+  font-size: 14.5px;
+  color: var(--accent-ink);
+  border-bottom: 1px solid transparent;
+}

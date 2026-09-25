@@ -23,3 +23,15 @@
     if (e.key === 'Escape') close();
   });
 })();
+
+// Language dropdown (a <details>): close on Escape or on a click elsewhere.
+(function () {
+  var dd = document.querySelector('.lang-switch details');
+  if (!dd) return;
+  document.addEventListener('click', function (e) {
+    if (!dd.contains(e.target)) dd.removeAttribute('open');
+  });
+  window.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') dd.removeAttribute('open');
+  });
+})();

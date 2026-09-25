@@ -8,3 +8,7 @@ node_modules/
 # (Main.dc.html itself is the source and IS tracked — only the seeded
 # watabook-marketing-site.html output is excluded.)
 design-canvas/watabook-marketing-site.html
+
+# Python bytecode from tools/build_locales.py
+__pycache__/
+*.pyc
