@@ -11,6 +11,7 @@
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://watabook.devandrepair.com/pt/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://watabook.devandrepair.com/it/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://watabook.devandrepair.com/"/>
+    <lastmod>2026-09-25</lastmod>
   </url>
   <url>
     <loc>https://watabook.devandrepair.com/fr/</loc>
@@ -22,6 +23,7 @@
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://watabook.devandrepair.com/pt/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://watabook.devandrepair.com/it/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://watabook.devandrepair.com/"/>
+    <lastmod>2026-09-25</lastmod>
   </url>
   <url>
     <loc>https://watabook.devandrepair.com/ar/</loc>
@@ -33,6 +35,7 @@
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://watabook.devandrepair.com/pt/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://watabook.devandrepair.com/it/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://watabook.devandrepair.com/"/>
+    <lastmod>2026-09-25</lastmod>
   </url>
   <url>
     <loc>https://watabook.devandrepair.com/de/</loc>
@@ -44,6 +47,7 @@
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://watabook.devandrepair.com/pt/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://watabook.devandrepair.com/it/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://watabook.devandrepair.com/"/>
+    <lastmod>2026-09-25</lastmod>
   </url>
   <url>
     <loc>https://watabook.devandrepair.com/es/</loc>
@@ -55,6 +59,7 @@
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://watabook.devandrepair.com/pt/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://watabook.devandrepair.com/it/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://watabook.devandrepair.com/"/>
+    <lastmod>2026-09-25</lastmod>
   </url>
   <url>
     <loc>https://watabook.devandrepair.com/pt/</loc>
@@ -66,6 +71,7 @@
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://watabook.devandrepair.com/pt/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://watabook.devandrepair.com/it/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://watabook.devandrepair.com/"/>
+    <lastmod>2026-09-25</lastmod>
   </url>
   <url>
     <loc>https://watabook.devandrepair.com/it/</loc>
@@ -77,236 +83,258 @@
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://watabook.devandrepair.com/pt/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://watabook.devandrepair.com/it/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://watabook.devandrepair.com/"/>
+    <lastmod>2026-09-25</lastmod>
   </url>
   <url>
-    <loc>https://watabook.devandrepair.com/privacy.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://watabook.devandrepair.com/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://watabook.devandrepair.com/fr/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://watabook.devandrepair.com/ar/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://watabook.devandrepair.com/de/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://watabook.devandrepair.com/es/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://watabook.devandrepair.com/pt/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://watabook.devandrepair.com/it/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://watabook.devandrepair.com/privacy.html"/>
+    <loc>https://watabook.devandrepair.com/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://watabook.devandrepair.com/privacy"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://watabook.devandrepair.com/fr/privacy"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://watabook.devandrepair.com/ar/privacy"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://watabook.devandrepair.com/de/privacy"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://watabook.devandrepair.com/es/privacy"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://watabook.devandrepair.com/pt/privacy"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://watabook.devandrepair.com/it/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://watabook.devandrepair.com/privacy"/>
+    <lastmod>2026-09-25</lastmod>
   </url>
   <url>
-    <loc>https://watabook.devandrepair.com/fr/privacy.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://watabook.devandrepair.com/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://watabook.devandrepair.com/fr/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://watabook.devandrepair.com/ar/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://watabook.devandrepair.com/de/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://watabook.devandrepair.com/es/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://watabook.devandrepair.com/pt/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://watabook.devandrepair.com/it/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://watabook.devandrepair.com/privacy.html"/>
+    <loc>https://watabook.devandrepair.com/fr/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://watabook.devandrepair.com/privacy"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://watabook.devandrepair.com/fr/privacy"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://watabook.devandrepair.com/ar/privacy"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://watabook.devandrepair.com/de/privacy"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://watabook.devandrepair.com/es/privacy"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://watabook.devandrepair.com/pt/privacy"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://watabook.devandrepair.com/it/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://watabook.devandrepair.com/privacy"/>
+    <lastmod>2026-09-25</lastmod>
   </url>
   <url>
-    <loc>https://watabook.devandrepair.com/ar/privacy.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://watabook.devandrepair.com/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://watabook.devandrepair.com/fr/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://watabook.devandrepair.com/ar/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://watabook.devandrepair.com/de/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://watabook.devandrepair.com/es/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://watabook.devandrepair.com/pt/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://watabook.devandrepair.com/it/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://watabook.devandrepair.com/privacy.html"/>
+    <loc>https://watabook.devandrepair.com/ar/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://watabook.devandrepair.com/privacy"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://watabook.devandrepair.com/fr/privacy"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://watabook.devandrepair.com/ar/privacy"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://watabook.devandrepair.com/de/privacy"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://watabook.devandrepair.com/es/privacy"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://watabook.devandrepair.com/pt/privacy"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://watabook.devandrepair.com/it/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://watabook.devandrepair.com/privacy"/>
+    <lastmod>2026-09-25</lastmod>
   </url>
   <url>
-    <loc>https://watabook.devandrepair.com/de/privacy.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://watabook.devandrepair.com/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://watabook.devandrepair.com/fr/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://watabook.devandrepair.com/ar/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://watabook.devandrepair.com/de/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://watabook.devandrepair.com/es/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://watabook.devandrepair.com/pt/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://watabook.devandrepair.com/it/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://watabook.devandrepair.com/privacy.html"/>
+    <loc>https://watabook.devandrepair.com/de/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://watabook.devandrepair.com/privacy"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://watabook.devandrepair.com/fr/privacy"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://watabook.devandrepair.com/ar/privacy"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://watabook.devandrepair.com/de/privacy"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://watabook.devandrepair.com/es/privacy"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://watabook.devandrepair.com/pt/privacy"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://watabook.devandrepair.com/it/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://watabook.devandrepair.com/privacy"/>
+    <lastmod>2026-09-25</lastmod>
   </url>
   <url>
-    <loc>https://watabook.devandrepair.com/es/privacy.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://watabook.devandrepair.com/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://watabook.devandrepair.com/fr/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://watabook.devandrepair.com/ar/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://watabook.devandrepair.com/de/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://watabook.devandrepair.com/es/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://watabook.devandrepair.com/pt/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://watabook.devandrepair.com/it/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://watabook.devandrepair.com/privacy.html"/>
+    <loc>https://watabook.devandrepair.com/es/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://watabook.devandrepair.com/privacy"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://watabook.devandrepair.com/fr/privacy"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://watabook.devandrepair.com/ar/privacy"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://watabook.devandrepair.com/de/privacy"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://watabook.devandrepair.com/es/privacy"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://watabook.devandrepair.com/pt/privacy"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://watabook.devandrepair.com/it/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://watabook.devandrepair.com/privacy"/>
+    <lastmod>2026-09-25</lastmod>
   </url>
   <url>
-    <loc>https://watabook.devandrepair.com/pt/privacy.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://watabook.devandrepair.com/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://watabook.devandrepair.com/fr/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://watabook.devandrepair.com/ar/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://watabook.devandrepair.com/de/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://watabook.devandrepair.com/es/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://watabook.devandrepair.com/pt/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://watabook.devandrepair.com/it/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://watabook.devandrepair.com/privacy.html"/>
+    <loc>https://watabook.devandrepair.com/pt/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://watabook.devandrepair.com/privacy"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://watabook.devandrepair.com/fr/privacy"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://watabook.devandrepair.com/ar/privacy"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://watabook.devandrepair.com/de/privacy"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://watabook.devandrepair.com/es/privacy"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://watabook.devandrepair.com/pt/privacy"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://watabook.devandrepair.com/it/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://watabook.devandrepair.com/privacy"/>
+    <lastmod>2026-09-25</lastmod>
   </url>
   <url>
-    <loc>https://watabook.devandrepair.com/it/privacy.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://watabook.devandrepair.com/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://watabook.devandrepair.com/fr/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://watabook.devandrepair.com/ar/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://watabook.devandrepair.com/de/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://watabook.devandrepair.com/es/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://watabook.devandrepair.com/pt/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://watabook.devandrepair.com/it/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://watabook.devandrepair.com/privacy.html"/>
+    <loc>https://watabook.devandrepair.com/it/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://watabook.devandrepair.com/privacy"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://watabook.devandrepair.com/fr/privacy"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://watabook.devandrepair.com/ar/privacy"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://watabook.devandrepair.com/de/privacy"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://watabook.devandrepair.com/es/privacy"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://watabook.devandrepair.com/pt/privacy"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://watabook.devandrepair.com/it/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://watabook.devandrepair.com/privacy"/>
+    <lastmod>2026-09-25</lastmod>
   </url>
   <url>
-    <loc>https://watabook.devandrepair.com/terms.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://watabook.devandrepair.com/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://watabook.devandrepair.com/fr/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://watabook.devandrepair.com/ar/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://watabook.devandrepair.com/de/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://watabook.devandrepair.com/es/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://watabook.devandrepair.com/pt/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://watabook.devandrepair.com/it/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://watabook.devandrepair.com/terms.html"/>
+    <loc>https://watabook.devandrepair.com/terms</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://watabook.devandrepair.com/terms"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://watabook.devandrepair.com/fr/terms"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://watabook.devandrepair.com/ar/terms"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://watabook.devandrepair.com/de/terms"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://watabook.devandrepair.com/es/terms"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://watabook.devandrepair.com/pt/terms"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://watabook.devandrepair.com/it/terms"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://watabook.devandrepair.com/terms"/>
+    <lastmod>2026-09-25</lastmod>
   </url>
   <url>
-    <loc>https://watabook.devandrepair.com/fr/terms.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://watabook.devandrepair.com/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://watabook.devandrepair.com/fr/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://watabook.devandrepair.com/ar/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://watabook.devandrepair.com/de/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://watabook.devandrepair.com/es/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://watabook.devandrepair.com/pt/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://watabook.devandrepair.com/it/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://watabook.devandrepair.com/terms.html"/>
+    <loc>https://watabook.devandrepair.com/fr/terms</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://watabook.devandrepair.com/terms"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://watabook.devandrepair.com/fr/terms"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://watabook.devandrepair.com/ar/terms"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://watabook.devandrepair.com/de/terms"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://watabook.devandrepair.com/es/terms"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://watabook.devandrepair.com/pt/terms"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://watabook.devandrepair.com/it/terms"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://watabook.devandrepair.com/terms"/>
+    <lastmod>2026-09-25</lastmod>
   </url>
   <url>
-    <loc>https://watabook.devandrepair.com/ar/terms.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://watabook.devandrepair.com/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://watabook.devandrepair.com/fr/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://watabook.devandrepair.com/ar/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://watabook.devandrepair.com/de/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://watabook.devandrepair.com/es/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://watabook.devandrepair.com/pt/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://watabook.devandrepair.com/it/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://watabook.devandrepair.com/terms.html"/>
+    <loc>https://watabook.devandrepair.com/ar/terms</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://watabook.devandrepair.com/terms"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://watabook.devandrepair.com/fr/terms"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://watabook.devandrepair.com/ar/terms"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://watabook.devandrepair.com/de/terms"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://watabook.devandrepair.com/es/terms"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://watabook.devandrepair.com/pt/terms"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://watabook.devandrepair.com/it/terms"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://watabook.devandrepair.com/terms"/>
+    <lastmod>2026-09-25</lastmod>
   </url>
   <url>
-    <loc>https://watabook.devandrepair.com/de/terms.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://watabook.devandrepair.com/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://watabook.devandrepair.com/fr/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://watabook.devandrepair.com/ar/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://watabook.devandrepair.com/de/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://watabook.devandrepair.com/es/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://watabook.devandrepair.com/pt/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://watabook.devandrepair.com/it/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://watabook.devandrepair.com/terms.html"/>
+    <loc>https://watabook.devandrepair.com/de/terms</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://watabook.devandrepair.com/terms"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://watabook.devandrepair.com/fr/terms"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://watabook.devandrepair.com/ar/terms"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://watabook.devandrepair.com/de/terms"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://watabook.devandrepair.com/es/terms"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://watabook.devandrepair.com/pt/terms"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://watabook.devandrepair.com/it/terms"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://watabook.devandrepair.com/terms"/>
+    <lastmod>2026-09-25</lastmod>
   </url>
   <url>
-    <loc>https://watabook.devandrepair.com/es/terms.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://watabook.devandrepair.com/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://watabook.devandrepair.com/fr/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://watabook.devandrepair.com/ar/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://watabook.devandrepair.com/de/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://watabook.devandrepair.com/es/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://watabook.devandrepair.com/pt/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://watabook.devandrepair.com/it/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://watabook.devandrepair.com/terms.html"/>
+    <loc>https://watabook.devandrepair.com/es/terms</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://watabook.devandrepair.com/terms"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://watabook.devandrepair.com/fr/terms"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://watabook.devandrepair.com/ar/terms"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://watabook.devandrepair.com/de/terms"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://watabook.devandrepair.com/es/terms"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://watabook.devandrepair.com/pt/terms"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://watabook.devandrepair.com/it/terms"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://watabook.devandrepair.com/terms"/>
+    <lastmod>2026-09-25</lastmod>
   </url>
   <url>
-    <loc>https://watabook.devandrepair.com/pt/terms.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://watabook.devandrepair.com/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://watabook.devandrepair.com/fr/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://watabook.devandrepair.com/ar/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://watabook.devandrepair.com/de/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://watabook.devandrepair.com/es/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://watabook.devandrepair.com/pt/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://watabook.devandrepair.com/it/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://watabook.devandrepair.com/terms.html"/>
+    <loc>https://watabook.devandrepair.com/pt/terms</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://watabook.devandrepair.com/terms"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://watabook.devandrepair.com/fr/terms"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://watabook.devandrepair.com/ar/terms"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://watabook.devandrepair.com/de/terms"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://watabook.devandrepair.com/es/terms"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://watabook.devandrepair.com/pt/terms"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://watabook.devandrepair.com/it/terms"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://watabook.devandrepair.com/terms"/>
+    <lastmod>2026-09-25</lastmod>
   </url>
   <url>
-    <loc>https://watabook.devandrepair.com/it/terms.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://watabook.devandrepair.com/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://watabook.devandrepair.com/fr/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://watabook.devandrepair.com/ar/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://watabook.devandrepair.com/de/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://watabook.devandrepair.com/es/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://watabook.devandrepair.com/pt/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://watabook.devandrepair.com/it/terms.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://watabook.devandrepair.com/terms.html"/>
+    <loc>https://watabook.devandrepair.com/it/terms</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://watabook.devandrepair.com/terms"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://watabook.devandrepair.com/fr/terms"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://watabook.devandrepair.com/ar/terms"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://watabook.devandrepair.com/de/terms"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://watabook.devandrepair.com/es/terms"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://watabook.devandrepair.com/pt/terms"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://watabook.devandrepair.com/it/terms"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://watabook.devandrepair.com/terms"/>
+    <lastmod>2026-09-25</lastmod>
   </url>
   <url>
-    <loc>https://watabook.devandrepair.com/support.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://watabook.devandrepair.com/support.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://watabook.devandrepair.com/fr/support.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://watabook.devandrepair.com/ar/support.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://watabook.devandrepair.com/de/support.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://watabook.devandrepair.com/es/support.html"/>
-    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://watabook.devandrepair.com/pt/support.html"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://watabook.devandrepair.com/it/support.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://watabook.devandrepair.com/support.html"/>
+    <loc>https://watabook.devandrepair.com/support</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://watabook.devandrepair.com/support"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://watabook.devandrepair.com/fr/support"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://watabook.devandrepair.com/ar/support"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://watabook.devandrepair.com/de/support"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://watabook.devandrepair.com/es/support"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://watabook.devandrepair.com/pt/support"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://watabook.devandrepair.com/it/support"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://watabook.devandrepair.com/support"/>
+    <lastmod>2026-09-25</lastmod>
   </url>
   <url>
-    <loc>https://watabook.devandrepair.com/fr/support.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://watabook.devandrepair.com/support.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://watabook.devandrepair.com/fr/support.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://watabook.devandrepair.com/ar/support.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://watabook.devandrepair.com/de/support.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://watabook.devandrepair.com/es/support.html"/>
-    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://watabook.devandrepair.com/pt/support.html"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://watabook.devandrepair.com/it/support.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://watabook.devandrepair.com/support.html"/>
+    <loc>https://watabook.devandrepair.com/fr/support</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://watabook.devandrepair.com/support"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://watabook.devandrepair.com/fr/support"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://watabook.devandrepair.com/ar/support"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://watabook.devandrepair.com/de/support"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://watabook.devandrepair.com/es/support"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://watabook.devandrepair.com/pt/support"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://watabook.devandrepair.com/it/support"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://watabook.devandrepair.com/support"/>
+    <lastmod>2026-09-25</lastmod>
   </url>
   <url>
-    <loc>https://watabook.devandrepair.com/ar/support.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://watabook.devandrepair.com/support.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://watabook.devandrepair.com/fr/support.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://watabook.devandrepair.com/ar/support.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://watabook.devandrepair.com/de/support.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://watabook.devandrepair.com/es/support.html"/>
-    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://watabook.devandrepair.com/pt/support.html"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://watabook.devandrepair.com/it/support.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://watabook.devandrepair.com/support.html"/>
+    <loc>https://watabook.devandrepair.com/ar/support</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://watabook.devandrepair.com/support"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://watabook.devandrepair.com/fr/support"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://watabook.devandrepair.com/ar/support"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://watabook.devandrepair.com/de/support"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://watabook.devandrepair.com/es/support"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://watabook.devandrepair.com/pt/support"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://watabook.devandrepair.com/it/support"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://watabook.devandrepair.com/support"/>
+    <lastmod>2026-09-25</lastmod>
   </url>
   <url>
-    <loc>https://watabook.devandrepair.com/de/support.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://watabook.devandrepair.com/support.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://watabook.devandrepair.com/fr/support.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://watabook.devandrepair.com/ar/support.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://watabook.devandrepair.com/de/support.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://watabook.devandrepair.com/es/support.html"/>
-    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://watabook.devandrepair.com/pt/support.html"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://watabook.devandrepair.com/it/support.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://watabook.devandrepair.com/support.html"/>
+    <loc>https://watabook.devandrepair.com/de/support</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://watabook.devandrepair.com/support"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://watabook.devandrepair.com/fr/support"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://watabook.devandrepair.com/ar/support"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://watabook.devandrepair.com/de/support"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://watabook.devandrepair.com/es/support"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://watabook.devandrepair.com/pt/support"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://watabook.devandrepair.com/it/support"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://watabook.devandrepair.com/support"/>
+    <lastmod>2026-09-25</lastmod>
   </url>
   <url>
-    <loc>https://watabook.devandrepair.com/es/support.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://watabook.devandrepair.com/support.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://watabook.devandrepair.com/fr/support.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://watabook.devandrepair.com/ar/support.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://watabook.devandrepair.com/de/support.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://watabook.devandrepair.com/es/support.html"/>
-    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://watabook.devandrepair.com/pt/support.html"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://watabook.devandrepair.com/it/support.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://watabook.devandrepair.com/support.html"/>
+    <loc>https://watabook.devandrepair.com/es/support</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://watabook.devandrepair.com/support"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://watabook.devandrepair.com/fr/support"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://watabook.devandrepair.com/ar/support"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://watabook.devandrepair.com/de/support"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://watabook.devandrepair.com/es/support"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://watabook.devandrepair.com/pt/support"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://watabook.devandrepair.com/it/support"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://watabook.devandrepair.com/support"/>
+    <lastmod>2026-09-25</lastmod>
   </url>
   <url>
-    <loc>https://watabook.devandrepair.com/pt/support.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://watabook.devandrepair.com/support.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://watabook.devandrepair.com/fr/support.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://watabook.devandrepair.com/ar/support.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://watabook.devandrepair.com/de/support.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://watabook.devandrepair.com/es/support.html"/>
-    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://watabook.devandrepair.com/pt/support.html"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://watabook.devandrepair.com/it/support.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://watabook.devandrepair.com/support.html"/>
+    <loc>https://watabook.devandrepair.com/pt/support</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://watabook.devandrepair.com/support"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://watabook.devandrepair.com/fr/support"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://watabook.devandrepair.com/ar/support"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://watabook.devandrepair.com/de/support"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://watabook.devandrepair.com/es/support"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://watabook.devandrepair.com/pt/support"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://watabook.devandrepair.com/it/support"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://watabook.devandrepair.com/support"/>
+    <lastmod>2026-09-25</lastmod>
   </url>
   <url>
-    <loc>https://watabook.devandrepair.com/it/support.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://watabook.devandrepair.com/support.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://watabook.devandrepair.com/fr/support.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://watabook.devandrepair.com/ar/support.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://watabook.devandrepair.com/de/support.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://watabook.devandrepair.com/es/support.html"/>
-    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://watabook.devandrepair.com/pt/support.html"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://watabook.devandrepair.com/it/support.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://watabook.devandrepair.com/support.html"/>
+    <loc>https://watabook.devandrepair.com/it/support</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://watabook.devandrepair.com/support"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://watabook.devandrepair.com/fr/support"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://watabook.devandrepair.com/ar/support"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://watabook.devandrepair.com/de/support"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://watabook.devandrepair.com/es/support"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://watabook.devandrepair.com/pt/support"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://watabook.devandrepair.com/it/support"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://watabook.devandrepair.com/support"/>
+    <lastmod>2026-09-25</lastmod>
   </url>
 </urlset>
