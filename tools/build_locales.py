@@ -63,23 +63,6 @@ def play_url(code):
     return f"{PLAY_URL}&hl={PLAY_HL[code]}"
 
 
-DOWNLOAD_ICON = (
-    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" '
-    'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'
-    '<path d="M12 4v11"/><path d="m7 10 5 5 5-5"/><path d="M5 20h14"/></svg>'
-)
-
-
-def download_btn(code, href, label):
-    """Nav "Download" button: js/script.js sends phones straight to their
-    store; everyone else lands on the hero's store badges (#download)."""
-    return (
-        f'<a class="btn btn-primary js-download" href="{href}" '
-        f'data-ios="{APP_STORE_URL}" data-android="{esc_attr(play_url(code))}">'
-        f'{DOWNLOAD_ICON}<span>{label}</span></a>'
-    )
-
-
 def esc_attr(s):
     return s.replace("&", "&amp;").replace('"', "&quot;")
 
@@ -214,7 +197,6 @@ def nav(L, page, active=None, home_anchor=True):
     home = path_of(code, "index")
     feat = ("" if page == "index" else home) + "#features"
     pric = ("" if page == "index" else home) + "#pricing"
-    dl = ("" if page == "index" else home) + "#download"
     priv = path_of(code, "privacy")
     terms = path_of(code, "terms")
 
@@ -231,7 +213,6 @@ def nav(L, page, active=None, home_anchor=True):
         <li><a href="{terms}"{act('terms')}>{n['terms']}</a></li>
         {switcher_nav(code, page, n['language'])}
       </ul>
-      <div class="nav-right">{download_btn(code, dl, n['download'])}</div>
       <button class="mobile-toggle" id="mobileToggle" aria-label="{n['menu_aria']}" aria-expanded="false">
         {MENU_ICON}
       </button>
@@ -242,7 +223,6 @@ def nav(L, page, active=None, home_anchor=True):
       <a href="{priv}">{n['privacy']}</a>
       <a href="{terms}">{n['terms']}</a>
       {switcher_mobile(code, page)}
-      {download_btn(code, dl, n['download'])}
     </div>
   </nav>
 """
@@ -314,7 +294,7 @@ def render_index(L):
     feats = "\n".join(
         f"""        <div class="feat">
           <div class="feat-icon">{FEAT_ICONS[k]}</div>
-          <span class="sec-num">§ 0{k + 1}</span>
+          <span class="sec-num">0{k + 1}</span>
           <h3>{t}</h3>
           <p>{p}</p>
         </div>"""
@@ -365,7 +345,7 @@ def render_index(L):
 
   <section class="features" id="features">
     <div class="container">
-      <div class="sec-head"><span class="sec-num">§ 01–04</span><span class="sec-label">{i['sec_features']}</span><span class="sec-rule"></span></div>
+      <div class="sec-head"><span class="sec-num">01–04</span><span class="sec-label">{i['sec_features']}</span><span class="sec-rule"></span></div>
       <div class="feat-grid">
 {feats}
       </div>
@@ -374,7 +354,7 @@ def render_index(L):
 
   <section class="pricing" id="pricing">
     <div class="container">
-      <div class="sec-head"><span class="sec-num">§ 05</span><span class="sec-label">{i['sec_pricing']}</span><span class="sec-rule"></span></div>
+      <div class="sec-head"><span class="sec-num">05</span><span class="sec-label">{i['sec_pricing']}</span><span class="sec-rule"></span></div>
       <div class="price-grid">
         <div class="plan">
           <div class="plan-name">{i['free']['name']}</div>
@@ -451,7 +431,7 @@ def _patch_block(s, block_re, tag, new, old_link_re, place):
     return s[: m.start()] + head_ + place(inner, new) + tail + s[m.end():]
 
 
-NAV_BLOCK = re.compile(r'(<ul class="nav-links">)(.*?)(</ul>\s*<div class="nav-right")', re.S)
+NAV_BLOCK = re.compile(r'(<ul class="nav-links">)(.*?)(</ul>\s*<button class="mobile-toggle")', re.S)
 MOB_BLOCK = re.compile(r'(<div class="mobile-sheet" id="mobileSheet">)(.*?)(</div>\s*</nav>)', re.S)
 FOOT_BLOCK = re.compile(r"(<footer>)(.*?)(</footer>)", re.S)
 OLD_LI = r'\s*<li><a href="[^"]*">(?:Français|English)</a></li>'
