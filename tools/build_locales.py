@@ -53,6 +53,64 @@ APPLE = (
 PLAY = (
     '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.6 2.18c-.35.2-.6.58-.6 1.03v17.58c0 .45.25.83.6 1.03l9.7-9.82L3.6 2.18zM15.4 12l2.37-2.4 3.53 2.02c.6.35.6 1.2 0 1.55l-3.53 2.02L15.4 12zM4.7 2l9 5.15L15.9 5 5.6 1.1c-.32-.12-.66-.02-.9.2v.05v.65zM4.7 22l9-5.15L15.9 19l-10.3 3.9c-.32.12-.66.02-.9-.2v-.05v-.65z"/></svg>'
 )
+APP_STORE_URL = "https://apps.apple.com/us/app/watabook-car-log-fault-code/id6812091402"
+PLAY_URL = "https://play.google.com/store/apps/details?id=com.devandrepair.watabook"
+# Play listing language per site locale (Apple localises by storefront, not URL).
+PLAY_HL = {"en": "en", "fr": "fr", "ar": "ar", "de": "de", "es": "es", "pt": "pt-PT", "it": "it"}
+
+
+def play_url(code):
+    return f"{PLAY_URL}&hl={PLAY_HL[code]}"
+
+
+DOWNLOAD_ICON = (
+    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" '
+    'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'
+    '<path d="M12 4v11"/><path d="m7 10 5 5 5-5"/><path d="M5 20h14"/></svg>'
+)
+
+
+def download_btn(code, href, label):
+    """Nav "Download" button: js/script.js sends phones straight to their
+    store; everyone else lands on the hero's store badges (#download)."""
+    return (
+        f'<a class="btn btn-primary js-download" href="{href}" '
+        f'data-ios="{APP_STORE_URL}" data-android="{esc_attr(play_url(code))}">'
+        f'{DOWNLOAD_ICON}<span>{label}</span></a>'
+    )
+
+
+def esc_attr(s):
+    return s.replace("&", "&amp;").replace('"', "&quot;")
+
+
+# Device frame around the hero mock: status bar + dynamic island on top,
+# icon-only tab bar + home indicator below. Purely decorative.
+PHONE_TOP = (
+    '<span class="phone-keys" aria-hidden="true"></span>\n'
+    '          <div class="screen">\n'
+    '            <div class="status-bar" aria-hidden="true"><span class="sb-time">9:41</span>'
+    '<span class="island"></span><span class="sb-icons">'
+    '<svg viewBox="0 0 18 12" fill="currentColor"><rect x="0" y="8" width="3" height="4" rx="1"/>'
+    '<rect x="5" y="5.5" width="3" height="6.5" rx="1"/><rect x="10" y="3" width="3" height="9" rx="1"/>'
+    '<rect x="15" y="0" width="3" height="12" rx="1"/></svg>'
+    '<svg viewBox="0 0 16 12" fill="currentColor"><path d="M8 2.6c2.3 0 4.4.9 6 2.4l1.3-1.4A10.4 10.4 0 0 0 8 .7 10.4 10.4 0 0 0 .7 3.6L2 5c1.6-1.5 3.7-2.4 6-2.4Zm0 3.6c1.3 0 2.5.5 3.4 1.3l1.3-1.4A6.7 6.7 0 0 0 8 4.3a6.7 6.7 0 0 0-4.7 1.8l1.3 1.4C5.5 6.7 6.7 6.2 8 6.2Zm0 3.5a1.7 1.7 0 0 0-1.2.5L8 11.6l1.2-1.4a1.7 1.7 0 0 0-1.2-.5Z"/></svg>'
+    '<svg class="sb-battery" viewBox="0 0 27 13" fill="none"><rect x=".5" y=".5" width="23" height="12" rx="3.5" stroke="currentColor" opacity=".4"/>'
+    '<rect x="2" y="2" width="17" height="9" rx="2" fill="currentColor"/>'
+    '<path d="M25 4.5v4c.8-.3 1.5-1.1 1.5-2s-.7-1.7-1.5-2Z" fill="currentColor" opacity=".45"/></svg>'
+    '</span></div>'
+)
+PHONE_BOTTOM = (
+    '            <div class="screen-foot" aria-hidden="true">\n'
+    '              <div class="tabs">'
+    '<span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/></svg></span>'
+    '<span class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 20h20L12 3Z"/><path d="M12 10v4"/><path d="M12 17h.01"/></svg></span>'
+    '<span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></span>'
+    '<span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14v-5l-2-5H7l-2 5v5Z"/><path d="M5 12h14"/><circle cx="8" cy="17" r="1.6"/><circle cx="16" cy="17" r="1.6"/></svg></span>'
+    '</div>\n'
+    '              <span class="home-indicator"></span>\n'
+    '            </div>\n'
+)
 FEAT_ICONS = [
     '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 20h20L12 3Z"/><path d="M12 10v4"/><path d="M12 17h.01"/></svg>',
     '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>',
@@ -156,6 +214,7 @@ def nav(L, page, active=None, home_anchor=True):
     home = path_of(code, "index")
     feat = ("" if page == "index" else home) + "#features"
     pric = ("" if page == "index" else home) + "#pricing"
+    dl = ("" if page == "index" else home) + "#download"
     priv = path_of(code, "privacy")
     terms = path_of(code, "terms")
 
@@ -172,7 +231,7 @@ def nav(L, page, active=None, home_anchor=True):
         <li><a href="{terms}"{act('terms')}>{n['terms']}</a></li>
         {switcher_nav(code, page, n['language'])}
       </ul>
-      <div class="nav-right"><a class="btn btn-primary" href="{pric}">{n['download']}</a></div>
+      <div class="nav-right">{download_btn(code, dl, n['download'])}</div>
       <button class="mobile-toggle" id="mobileToggle" aria-label="{n['menu_aria']}" aria-expanded="false">
         {MENU_ICON}
       </button>
@@ -183,7 +242,7 @@ def nav(L, page, active=None, home_anchor=True):
       <a href="{priv}">{n['privacy']}</a>
       <a href="{terms}">{n['terms']}</a>
       {switcher_mobile(code, page)}
-      <a class="btn btn-primary" href="{pric}">{n['download']}</a>
+      {download_btn(code, dl, n['download'])}
     </div>
   </nav>
 """
@@ -238,6 +297,7 @@ def render_index(L):
     "@type": "MobileApplication",
     "name": "Watabook",
     "operatingSystem": "iOS, Android",
+    "installUrl": ["{APP_STORE_URL}", "{play_url(code)}"],
     "applicationCategory": "UtilitiesApplication",
     "inLanguage": "{L['htmllang']}",
     "offers": {{
@@ -263,18 +323,18 @@ def render_index(L):
     free_items = "\n".join(f"            <li>{x}</li>" for x in i["free"]["items"])
     pro_items = "\n".join(f"            <li>{x}</li>" for x in i["pro"]["items"])
     body += f"""
-  <section class="hero">
+  <section class="hero" id="download">
     <div class="container">
       <div>
         <p class="kicker">{i['kicker']}</p>
         <h1>{i['h1']}</h1>
         <p class="lead">{i['lead']}</p>
         <div class="store-row">
-          <a class="store-btn" href="#pricing" aria-label="{esc(i['dl_on'])} App Store">
+          <a class="store-btn" href="{APP_STORE_URL}" target="_blank" rel="noopener" aria-label="{esc(i['dl_on'])} App Store">
             {APPLE}
             <span><span class="l1">{i['dl_on']}</span><span class="l2">App Store</span></span>
           </a>
-          <a class="store-btn" href="#pricing" aria-label="{esc(i['get_on'])} Google Play">
+          <a class="store-btn" href="{esc_attr(play_url(code))}" target="_blank" rel="noopener" aria-label="{esc(i['get_on'])} Google Play">
             {PLAY}
             <span><span class="l1">{i['get_on']}</span><span class="l2">Google Play</span></span>
           </a>
@@ -283,7 +343,7 @@ def render_index(L):
       </div>
       <div class="phone-stage">
         <div class="phone">
-          <div class="screen">
+          {PHONE_TOP}
             <div class="screen-bar"><span class="chip-code">P0301</span></div>
             <div class="screen-title">{ph['title']}</div>
             <p class="screen-body">{ph['body']}</p>
@@ -297,7 +357,7 @@ def render_index(L):
               <div class="row-title">{ph['row2']}</div>
               <div class="row-sub mono">{ph['row2_sub']}</div>
             </div>
-          </div>
+{PHONE_BOTTOM}          </div>
         </div>
       </div>
     </div>
