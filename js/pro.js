@@ -61,6 +61,8 @@
   var result = $('keyResult');
   function showResult(statusText) {
     $('planRow').hidden = true;
+    $('plansTitle').textContent = 'Thank you for buying Watabook Pro';
+    $('planFine').hidden = true;
     result.hidden = false;
     $('keyStatus').textContent = statusText;
     result.focus({ preventScroll: true });
