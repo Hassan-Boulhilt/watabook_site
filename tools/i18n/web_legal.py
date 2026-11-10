@@ -11,7 +11,7 @@
 #   terms:   updated, toc4 (text of the 4th TOC entry), section4 (replaces the
 #            whole 4th section, from its <h2> to the next <h2>)
 
-MAIL = '<a href="mailto:hello@devandrepair.com">hello@devandrepair.com</a>'
+MAIL = '<a href="mailto:support@devandrepair.com">support@devandrepair.com</a>'
 
 LEGAL = {}
 

@@ -116,7 +116,7 @@ L = dict(
         <h2 id="contact">Contatti</h2>
         <div class="contact-card">
           <div class="label">Richieste sulla privacy</div>
-          <p>Email: <a href="mailto:hello@devandrepair.com">hello@devandrepair.com</a></p>
+          <p>Email: <a href="mailto:support@devandrepair.com">support@devandrepair.com</a></p>
         </div>
 
         <p><em>Questa è una traduzione dell'originale in inglese. In caso di discrepanza prevale la versione inglese.</em></p>""",
@@ -222,7 +222,7 @@ L = dict(
         <h2 id="contact-terms">14. Contatti</h2>
         <div class="contact-card">
           <div class="label">Richieste sui Termini</div>
-          <p>Email: <a href="mailto:hello@devandrepair.com">hello@devandrepair.com</a><br>
+          <p>Email: <a href="mailto:support@devandrepair.com">support@devandrepair.com</a><br>
           Sito web: <a href="https://watabook.devandrepair.com">watabook.devandrepair.com</a></p>
         </div>
 
@@ -235,7 +235,7 @@ L = dict(
         reply="Di solito rispondiamo entro 2 giorni lavorativi.",
         body="""        <div class="contact-card">
           <div class="label">Contattaci</div>
-          <p>Email: <a href="mailto:hello@devandrepair.com">hello@devandrepair.com</a><br>
+          <p>Email: <a href="mailto:support@devandrepair.com">support@devandrepair.com</a><br>
           Indica il tuo dispositivo (iPhone/Android), la versione dell'app e cosa è successo: uno screenshot aiuta.</p>
         </div>
 
