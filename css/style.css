@@ -644,3 +644,10 @@ footer { border-top: 1px solid var(--hairline); padding: 40px 0; }
   .spec th, .spec td { padding: 12px 12px; }
   .spec tbody th { width: auto; }
 }
+
+/* Home price box: link from the Pro plan to /pro (Android buyers) */
+.android-cta { display: inline-flex; align-items: center; gap: 6px; margin-top: -6px; font-size: 14px; font-weight: 600; color: var(--accent); }
+.android-cta:hover { color: var(--accent-pressed); text-decoration: underline; text-underline-offset: 3px; }
+[dir="rtl"] .android-cta span { transform: scaleX(-1); }
+.translation-note { font-size: 13px !important; color: var(--ink-2); margin-top: 32px !important; }
+[dir="rtl"] .key-plate::before { inset: 12px auto auto 12px; box-shadow: 14px 0 0 var(--hairline); }

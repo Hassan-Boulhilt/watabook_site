@@ -32,7 +32,7 @@
       <a class="wordmark" href="/es/" aria-label="Inicio de Watabook"><img class="mark" src="/assets/icon.svg" alt="" width="28" height="28">Watabook</a>
       <ul class="nav-links">
         <li><a href="/es/#features">Funciones</a></li>
-        <li><a href="/es/#pricing">Precios</a></li>
+        <li><a href="/es/pro.html">Pro</a></li>
         <li><a href="/es/privacy.html" class="active">Privacidad</a></li>
         <li><a href="/es/terms.html">Condiciones</a></li>
         <!--lang-nav--><li class="lang-switch"><details><summary aria-label="Idioma"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>Español</summary><ul><li><a href="/privacy.html" hreflang="en" lang="en">English</a></li><li><a href="/fr/privacy.html" hreflang="fr" lang="fr">Français</a></li><li><a href="/ar/privacy.html" hreflang="ar" lang="ar">العربية</a></li><li><a href="/de/privacy.html" hreflang="de" lang="de">Deutsch</a></li><li><a href="/es/privacy.html" hreflang="es" lang="es" aria-current="true">Español</a></li><li><a href="/pt/privacy.html" hreflang="pt-PT" lang="pt-PT">Português</a></li><li><a href="/it/privacy.html" hreflang="it" lang="it">Italiano</a></li></ul></details></li><!--/lang-nav-->
@@ -43,7 +43,7 @@
     </div>
     <div class="mobile-sheet" id="mobileSheet">
       <a href="/es/#features">Funciones</a>
-      <a href="/es/#pricing">Precios</a>
+      <a href="/es/pro.html">Pro</a>
       <a href="/es/privacy.html">Privacidad</a>
       <a href="/es/terms.html">Condiciones</a>
       <!--lang-mobile--><div class="lang-row"><a href="/privacy.html" hreflang="en" lang="en">English</a><a href="/fr/privacy.html" hreflang="fr" lang="fr">Français</a><a href="/ar/privacy.html" hreflang="ar" lang="ar">العربية</a><a href="/de/privacy.html" hreflang="de" lang="de">Deutsch</a><a href="/es/privacy.html" hreflang="es" lang="es" aria-current="true">Español</a><a href="/pt/privacy.html" hreflang="pt-PT" lang="pt-PT">Português</a><a href="/it/privacy.html" hreflang="it" lang="it">Italiano</a></div><!--/lang-mobile-->
@@ -57,7 +57,7 @@
       <div class="legal-header">
         <h1>Política de privacidad</h1>
         <div class="meta">
-          <span>Última actualización: 12 de septiembre de 2026</span>
+          <span>Última actualización: 10 de noviembre de 2026</span>
           <span>DevAndRepair</span>
         </div>
       </div>
@@ -66,7 +66,8 @@
         <p>Watabook es un libro de mantenimiento para tu coche. Está pensado para mantener tus datos <strong>en tu dispositivo</strong>.</p>
 
         <h2 id="collect">Qué recopilamos</h2>
-        <p><strong>Nada.</strong> Watabook no tiene cuenta, ni inicio de sesión, ni analítica, ni publicidad, ni seguimiento. No disponemos de ningún servidor que almacene tu información.</p>
+        <p><strong>Nada desde la app.</strong> Watabook no tiene cuenta, ni inicio de sesión, ni analíticas, ni publicidad, ni seguimiento. No tenemos un servidor que guarde lo que introduces en la app.</p>
+        <p>La única excepción es comprar Pro en esta web: entonces guardamos un pequeño registro de licencia, descrito en <a href="#web-purchase">Si compras Pro en esta web</a> más abajo.</p>
         <p>Todo lo que introduces (vehículos, entradas de mantenimiento y combustible, recordatorios, documentos, historial de códigos de avería) se guarda únicamente en el almacenamiento privado de la app en tu móvil. Los documentos que añades a la caja de documentos se cifran en el dispositivo.</p>
 
         <h2 id="internet">Cuándo usa la app internet</h2>
@@ -75,20 +76,31 @@
           <li><strong>&laquo;Explicar de forma sencilla&raquo; (IA):</strong> envía el código de avería, la marca de tu coche, el idioma que elijas y un identificador aleatorio de la app (no vinculado a ti) a nuestro servicio de procesamiento, que pide a Google Gemini una explicación en lenguaje claro. Nunca se envían tu nombre, tu correo electrónico ni tu ubicación.</li>
           <li><strong>Decodificación del VIN:</strong> envía el VIN de 17 caracteres que escribes a la base de datos pública de vehículos de la NHTSA de EE. UU. para rellenar la marca, el modelo y el año.</li>
           <li><strong>Compras:</strong> la suscripción y la restauración las gestionan la facturación de Apple / Google y RevenueCat, que recibe un justificante de compra y su propio identificador anónimo, no tu identidad.</li>
+          <li><strong>Clave de licencia (Android, comprada en esta web):</strong> cuando introduces una clave, la app envía la clave y un identificador de dispositivo aleatorio creado por ella a nuestro servicio de licencias, una vez para activarla y después aproximadamente una vez al mes para comprobar que sigue siendo válida. La app no envía nombre, email ni ubicación.</li>
           <li><strong>Exportar y compartir:</strong> cuando exportas un CSV o PDF, o compartes un documento, el menú de compartir de tu dispositivo lo envía adonde <em>tú</em> elijas. Watabook no lo transmite.</li>
         </ul>
         <p>Todas estas conexiones usan HTTPS.</p>
+
+        <h2 id="web-purchase">Si compras Pro en esta web</h2>
+        <p>Los pagos en esta web los procesa <strong>PayPal</strong>. Nunca vemos ni guardamos los datos de tu tarjeta o banco. Para darte una clave de licencia, nuestro servicio de licencias guarda:</p>
+        <ul>
+          <li>el email que PayPal nos facilita para tu compra, para enviarte la clave y ayudarte si la pierdes;</li>
+          <li>tu clave de licencia, el plan, su fecha de caducidad y los ID de pedido o suscripción y de pago de PayPal;</li>
+          <li>por cada dispositivo donde actives la clave: el identificador aleatorio del dispositivo, un nombre opcional y las fechas de activación y última comprobación.</li>
+        </ul>
+        <p>El servicio de licencias funciona en Cloudflare. Los emails con la clave se envían a través de Resend. Usamos tu email solo para tu clave y para dudas sobre tu compra, nunca para marketing salvo que lo aceptes por separado.</p>
+        <p>Guardamos el registro de licencia mientras tu licencia sea válida y, después, el tiempo que exija la ley a efectos contables. Puedes pedir verlo o borrarlo en <a href="mailto:hello@devandrepair.com">hello@devandrepair.com</a>; borrarlo termina la licencia.</p>
 
         <h2 id="control">Tu control</h2>
         <ul>
           <li>Elimina cualquier entrada, documento o vehículo de la app en cualquier momento.</li>
           <li>Al desinstalar Watabook se eliminan de forma permanente todos sus datos de tu dispositivo.</li>
-          <li>No hay datos en ningún servidor que eliminar, porque no guardamos ninguno.</li>
+          <li>La app no guarda datos en nuestros servidores. Si compraste Pro en esta web, puedes pedir que borremos tu registro de licencia (ver arriba).</li>
           <li>Exporta todo como CSV cuando quieras: tus datos nunca quedan atrapados.</li>
         </ul>
 
         <h2 id="children">Menores</h2>
-        <p>Watabook no está dirigida a menores y no recopila datos de nadie.</p>
+        <p>Watabook no está dirigido a niños. La app no recoge datos de nadie; las compras en esta web son para adultos con cuenta de PayPal o tarjeta.</p>
 
         <h2 id="changes">Cambios</h2>
         <p>Si esta política cambia, la fecha de &laquo;última actualización&raquo; de arriba cambiará y la nueva versión se publicará aquí.</p>
@@ -110,6 +122,7 @@
       <ul class="foot-links">
         <li><a href="/es/privacy.html">Privacidad</a></li>
         <li><a href="/es/terms.html">Condiciones</a></li>
+        <li><a href="/es/refund.html">Reembolsos</a></li>
         <li><a href="/es/support.html">Ayuda</a></li>
       </ul>
       <span class="foot-copy">&copy; 2026 DevAndRepair.</span>

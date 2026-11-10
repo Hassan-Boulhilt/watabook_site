@@ -17,7 +17,18 @@ import sys
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 sys.path.insert(0, os.path.join(ROOT, "tools"))
 
+from i18n.web_sales import W  # noqa: E402
+from i18n.web_legal import LEGAL  # noqa: E402
+
 BASE = "https://watabook.devandrepair.com"
+
+# Nav strings for the hand-written en/fr pages (used by /pro and /refund).
+NAV_EN = dict(main_aria="Main navigation", home_aria="Watabook home", features="Features",
+              privacy="Privacy", terms="Terms", support="Support", menu_aria="Toggle navigation",
+              language="Language", back="Back to Watabook")
+NAV_FR = dict(main_aria="Navigation principale", home_aria="Accueil Watabook", features="Fonctionnalités",
+              privacy="Confidentialité", terms="Conditions", support="Assistance",
+              menu_aria="Afficher la navigation", language="Langue", back="Retour à Watabook")
 # code, hreflang/html lang, endonym
 LANGS = [
     ("en", "en", "English"),
@@ -29,7 +40,9 @@ LANGS = [
     ("it", "it", "Italiano"),
 ]
 GENERATED = ["ar", "de", "es", "pt", "it"]
-PAGES = ["index", "privacy", "terms", "support"]
+LEGACY_PAGES = ["index", "privacy", "terms", "support"]
+SALES_PAGES = ["pro", "refund"]  # generated for every language, en and fr included
+PAGES = LEGACY_PAGES + SALES_PAGES
 # Strings the en/fr patcher needs (their pages are hand-written, not generated).
 PATCH_LABELS = {"en": "Language", "fr": "Langue"}
 
@@ -197,7 +210,8 @@ def nav(L, page, active=None, home_anchor=True):
     n = L["nav"]
     home = path_of(code, "index")
     feat = ("" if page == "index" else home) + "#features"
-    pric = ("" if page == "index" else home) + "#pricing"
+    pro = path_of(code, "pro")
+    pro_label = W[code]["nav_pro"]
     priv = path_of(code, "privacy")
     terms = path_of(code, "terms")
 
@@ -209,7 +223,7 @@ def nav(L, page, active=None, home_anchor=True):
       <a class="wordmark" href="{home}" aria-label="{n['home_aria']}"><img class="mark" src="/assets/icon.svg" alt="" width="28" height="28">Watabook</a>
       <ul class="nav-links">
         <li><a href="{feat}">{n['features']}</a></li>
-        <li><a href="{pric}">{n['pricing']}</a></li>
+        <li><a href="{pro}"{act('pro')}>{pro_label}</a></li>
         <li><a href="{priv}"{act('privacy')}>{n['privacy']}</a></li>
         <li><a href="{terms}"{act('terms')}>{n['terms']}</a></li>
         {switcher_nav(code, page, n['language'])}
@@ -220,7 +234,7 @@ def nav(L, page, active=None, home_anchor=True):
     </div>
     <div class="mobile-sheet" id="mobileSheet">
       <a href="{feat}">{n['features']}</a>
-      <a href="{pric}">{n['pricing']}</a>
+      <a href="{pro}">{pro_label}</a>
       <a href="{priv}">{n['privacy']}</a>
       <a href="{terms}">{n['terms']}</a>
       {switcher_mobile(code, page)}
@@ -229,7 +243,7 @@ def nav(L, page, active=None, home_anchor=True):
 """
 
 
-def footer(L, page):
+def footer(L, page, scripts=("/js/script.js",)):
     code = L["code"]
     n = L["nav"]
     return f"""  <footer>
@@ -238,6 +252,7 @@ def footer(L, page):
       <ul class="foot-links">
         <li><a href="{path_of(code, 'privacy')}">{n['privacy']}</a></li>
         <li><a href="{path_of(code, 'terms')}">{n['terms']}</a></li>
+        <li><a href="{path_of(code, 'refund')}">{W[code]['nav_refunds']}</a></li>
         <li><a href="{path_of(code, 'support')}">{n['support']}</a></li>
       </ul>
       <span class="foot-copy">&copy; 2026 DevAndRepair.</span>
@@ -245,8 +260,7 @@ def footer(L, page):
     </div>
   </footer>
 
-  <script src="/js/script.js"></script>
-</body>
+{"".join(f'  <script src="{src}"></script>{chr(10)}' for src in scripts)}</body>
 </html>
 """
 
@@ -359,7 +373,7 @@ def render_index(L):
       <div class="price-grid">
         <div class="plan">
           <div class="plan-name">{i['free']['name']}</div>
-          <div class="plan-price mono">{i['free'].get('price', '&euro;0')}</div>
+          <div class="plan-price mono">{W[code]['home']['free_price']}</div>
           <div class="plan-sub">{i['free']['sub']}</div>
           <ul>
 {free_items}
@@ -368,14 +382,15 @@ def render_index(L):
         <div class="plan pro">
           <span class="badge">{i['pro']['badge']}</span>
           <div class="plan-name">{i['pro']['name']}</div>
-          <div class="plan-price mono">{i['pro'].get('price', '&euro;1.99')}<span>{i['pro']['per_month']}</span></div>
-          <div class="plan-sub">{i['pro']['sub']}</div>
+          <div class="plan-price mono">{W[code]['home']['price']}<span>{W[code]['home']['per']}</span></div>
+          <div class="plan-sub">{W[code]['home']['sub']}</div>
           <ul>
 {pro_items}
           </ul>
+          <a class="android-cta" href="{path_of(code, 'pro')}">{W[code]['home']['android_cta']} <span aria-hidden="true">&rarr;</span></a>
         </div>
       </div>
-      <p class="price-note">{i['price_note']}</p>
+      <p class="price-note">{home_price_note(code, i['price_note'])}</p>
     </div>
   </section>
 
@@ -385,7 +400,11 @@ def render_index(L):
 
 def render_legal(L, page):
     n = L["nav"]
-    d = L[page]
+    d = dict(L[page])
+    if page in ("privacy", "terms"):
+        lg = LEGAL[L["code"]][page]
+        d["body"] = apply_privacy(d["body"], lg) if page == "privacy" else apply_terms(d["body"], lg)
+        d["updated"] = lg["updated"]
     if page == "privacy":
         meta = f"<span>{d['updated']}</span>\n          <span>DevAndRepair</span>"
     elif page == "terms":
@@ -417,6 +436,315 @@ def render_legal(L, page):
 
 """
     return h + body + footer(L, page)
+
+
+# ---------------------------------------------------------------- web sales (Pro on the web)
+
+def home_price_note(code, note):
+    """Swap the first line of the price note (currency/store) for the USD one; keep the AI line."""
+    rest = note.split("<br>", 1)[1] if "<br>" in note else ""
+    first = W[code]["home"]["price_note_first"]
+    return first + ("<br>" + rest if rest else "")
+
+
+def _sections(body):
+    """Split a legal body into (start, end) spans per <h2>."""
+    starts = [m.start() for m in re.finditer(r"<h2[ >]", body)]
+    return [(a, starts[k + 1] if k + 1 < len(starts) else len(body)) for k, a in enumerate(starts)]
+
+
+def apply_privacy(body, lg):
+    """Web-sales edits to a privacy body (same section order in every language)."""
+    if 'id="web-purchase"' in body or 'id="achat-web"' in body:
+        return body
+    sec = _sections(body)
+    # work from the end so earlier offsets stay valid
+    # 4th section (children): replace its <p>
+    a, b = sec[3]
+    part = re.sub(r"<p>.*?</p>", lambda m: lg["children"], body[a:b], count=1, flags=re.S)
+    body = body[:a] + part + body[b:]
+    # 3rd section (control): replace its 3rd <li>
+    sec = _sections(body)
+    a, b = sec[2]
+    lis = list(re.finditer(r"<li>.*?</li>", body[a:b], flags=re.S))
+    li = lis[2]
+    body = body[:a + li.start()] + lg["control_li"] + body[a + li.end():]
+    # new section before the 3rd <h2>
+    sec = _sections(body)
+    a, _ = sec[2]
+    body = body[:a] + lg["section"] + body[a:]
+    # 2nd section (internet): insert after its 3rd <li>
+    sec = _sections(body)
+    a, b = sec[1]
+    lis = list(re.finditer(r"<li>.*?</li>", body[a:b], flags=re.S))
+    li = lis[2]
+    body = body[:a + li.end()] + "\n          " + lg["license_li"] + body[a + li.end():]
+    # 1st section (collect): replace its first <p>
+    sec = _sections(body)
+    a, b = sec[0]
+    part = re.sub(r"<p>.*?</p>", lambda m: lg["collect"], body[a:b], count=1, flags=re.S)
+    return body[:a] + part + body[b:]
+
+
+def apply_terms(body, lg):
+    """Replace section 4 (subscriptions) and its TOC entry."""
+    if "PayPal" in body:
+        return body
+    sec = _sections(body)
+    a, b = sec[3]
+    body = body[:a] + lg["section4"] + body[b:]
+    # 4th TOC entry text
+    m = re.search(r'(<div class="toc">.*?</ol>)', body, re.S)
+    if m:
+        toc = m.group(1)
+        items = list(re.finditer(r'(<li><a href="#[^"]*">)(.*?)(</a></li>)', toc))
+        if len(items) >= 4:
+            it = items[3]
+            toc2 = toc[:it.start(2)] + lg["toc4"] + toc[it.end(2):]
+            body = body[:m.start(1)] + toc2 + body[m.end(1):]
+    return body
+
+
+def nav_for(code):
+    if code == "en":
+        return NAV_EN
+    if code == "fr":
+        return NAV_FR
+    return importlib.import_module(f"i18n.{code}").L["nav"]
+
+
+def lang_ctx(code):
+    """Minimal L-like dict so head()/nav()/footer() work for every language."""
+    hl = next(h for c, h, _ in LANGS if c == code)
+    return dict(code=code, htmllang=hl, dir="rtl" if code == "ar" else "ltr", nav=nav_for(code))
+
+
+TICK = '<svg class="tick" viewBox="0 0 16 16" aria-label="{label}" role="img"><path d="M3 8.5l3 3 7-7"/></svg>'
+
+
+def render_pro(code):
+    import json
+    L = lang_ctx(code)
+    t = W[code]["pro"]
+    refund = path_of(code, "refund")
+    og = f"""  <meta property="og:title" content="{esc(t['og_title'])}">
+  <meta property="og:description" content="{esc(t['og_desc'])}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{url_of(code, 'pro')}">
+  <meta property="og:image" content="{BASE}/assets/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">"""
+    h = head(L, "pro", t["title"], t["description"], og) + "</head>\n<body>\n\n"
+    tick = TICK.format(label=esc(t["included"]))
+    dash = f'<span class="dash" aria-label="{esc(t["not_included"])}">&mdash;</span>'
+    r = t["rows"]
+    rows = [
+        (r["vehicles"], '<td class="mono">1</td>', f'<td class="mono">{t["unlimited"]}</td>'),
+        (r["entries"], f'<td class="mono">{t["unlimited"]}</td>', f'<td class="mono">{t["unlimited"]}</td>'),
+        (r["dictionary"], f"<td>{tick}</td>", f"<td>{tick}</td>"),
+        (r["lights"], '<td class="mono">36</td>', '<td class="mono">36</td>'),
+        (r["reminders"], f"<td>{t['rem_free']}</td>", f"<td>{t['rem_pro']}</td>"),
+        (r["ai"], f"<td>{dash}</td>", f"<td>{tick}</td>"),
+        (r["vault"], f"<td>{dash}</td>", f"<td>{tick}</td>"),
+        (r["pdf"], f"<td>{dash}</td>", f"<td>{tick}</td>"),
+        (r["csv"], f"<td>{tick}</td>", f"<td>{tick}</td>"),
+    ]
+    rows_html = "\n".join(f'              <tr><th scope="row">{a}</th>{b}{c}</tr>' for a, b, c in rows)
+    plate_rows = "\n".join(
+        f'            <div><dt>{k}</dt><dd class="mono">{v}</dd></div>' for k, v in t["plate_rows"]
+    )
+    steps = "\n".join(
+        f'            <li><span class="step-n mono">{k + 1}</span><span>{s_}</span></li>'
+        for k, s_ in enumerate(t["steps"])
+    )
+    faq = "\n".join(
+        f"          <div>\n            <h3>{f['q']}</h3>\n            <p>{f['a'].format(refund=refund)}</p>\n          </div>"
+        for f in t["faq"]
+    )
+    strings = json.dumps(t["js"], ensure_ascii=False).replace("</", "<\\/")
+    body = nav(L, "pro", active="pro")
+    body += f"""
+  <div class="test-banner" id="testBanner" hidden>
+    <div class="container">{t['test_banner']}</div>
+  </div>
+
+  <main class="pro-page">
+
+    <section class="pro-intro">
+      <div class="container">
+        <div class="pro-intro-text">
+          <h1>{t['h1']}</h1>
+          <p class="lead">{t['lead']}</p>
+          <p class="ios-note">{t['ios_note']}</p>
+        </div>
+
+        <figure class="key-plate" aria-label="{esc(t['plate_aria'])}">
+          <div class="key-plate-head">
+            <span>Watabook Pro</span>
+            <span class="mono">{t['plate_label']}</span>
+          </div>
+          <p class="key-plate-key mono" dir="ltr">WATA-<wbr>7K3QD-<wbr>XM2PA-<wbr>0N4RT-<wbr>9BZ1C</p>
+          <dl class="key-plate-rows">
+{plate_rows}
+          </dl>
+          <figcaption>{t['plate_caption']}</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="pro-plans" id="plans" aria-labelledby="plansTitle">
+      <div class="container">
+        <h2 id="plansTitle" class="pro-h2">{t['plans_title']}</h2>
+
+        <div class="plan-row" id="planRow">
+          <article class="plan pro buy-plan" data-sku="watabook_pro_yearly" aria-labelledby="yearlyName">
+            <span class="badge">{t['badge']}</span>
+            <h3 class="plan-name" id="yearlyName">{t['yearly']}</h3>
+            <p class="plan-price mono"><bdi dir="ltr">$7.99</bdi><span>{t['yearly_per']}</span></p>
+            <p class="plan-sub">{t['yearly_sub']}</p>
+            <div class="pay-slot" id="paySlotYearly" aria-live="polite">
+              <p class="pay-loading">{t['loading']}</p>
+            </div>
+          </article>
+
+          <article class="plan buy-plan" data-sku="watabook_pro_lifetime" aria-labelledby="lifetimeName">
+            <h3 class="plan-name" id="lifetimeName">{t['lifetime']}</h3>
+            <p class="plan-price mono"><bdi dir="ltr">$19.99</bdi><span>{t['lifetime_per']}</span></p>
+            <p class="plan-sub">{t['lifetime_sub']}</p>
+            <div class="pay-slot" id="paySlotLifetime" aria-live="polite">
+              <p class="pay-loading">{t['loading']}</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="key-result" id="keyResult" hidden tabindex="-1" aria-live="polite">
+          <div class="key-result-status" id="keyStatus"></div>
+          <div class="key-result-box" id="keyBox" hidden>
+            <p class="key-result-key mono" id="keyValue" dir="ltr"></p>
+            <button type="button" class="btn btn-secondary" id="copyKey">{t['copy']}</button>
+          </div>
+          <p class="key-result-mail" id="keyMail" hidden></p>
+          <ol class="steps">
+{steps}
+          </ol>
+        </div>
+
+        <p class="plan-fine" id="planFine">{t['fine'].format(refund=refund)}</p>
+      </div>
+    </section>
+
+    <section class="pro-compare" aria-labelledby="compareTitle">
+      <div class="container">
+        <h2 id="compareTitle" class="pro-h2">{t['compare_title']}</h2>
+        <div class="spec-wrap">
+          <table class="spec">
+            <thead>
+              <tr><th scope="col"><span class="sr">{t['th_feature']}</span></th><th scope="col">{t['th_free']}</th><th scope="col">{t['th_pro']}</th></tr>
+            </thead>
+            <tbody>
+{rows_html}
+            </tbody>
+          </table>
+        </div>
+        <p class="plan-fine">{t['ai_note']}</p>
+      </div>
+    </section>
+
+    <section class="pro-faq" aria-labelledby="faqTitle">
+      <div class="container">
+        <h2 id="faqTitle" class="pro-h2">{t['faq_title']}</h2>
+        <div class="faq-grid">
+{faq}
+        </div>
+
+        <form class="lost-key" id="lostKey" novalidate>
+          <h3>{t['lost_title']}</h3>
+          <p>{t['lost_text']}</p>
+          <div class="lost-key-row">
+            <label class="sr" for="lostEmail">{t['lost_label']}</label>
+            <input id="lostEmail" name="email" type="email" autocomplete="email" placeholder="{esc(t['lost_placeholder'])}" dir="ltr" required>
+            <button type="submit" class="btn btn-secondary">{t['lost_button']}</button>
+          </div>
+          <p class="lost-key-msg" id="lostMsg" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <script type="application/json" id="proStrings">{strings}</script>
+"""
+    return h + body + footer(L, "pro", scripts=("/js/script.js", "/js/pro.js"))
+
+
+def render_refund(code):
+    L = lang_ctx(code)
+    t = W[code]["refund"]
+    h = head(L, "refund", t["title"], t["description"]) + "</head>\n<body>\n\n"
+    secs = "\n\n".join(
+        f'        <h2 id="{sid}">{h2}</h2>\n        <p>{p}</p>' for sid, h2, p in t["sections"]
+    )
+    prevails = f'\n\n        <p class="translation-note"><em>{t["prevails"]}</em></p>' if t["prevails"] else ""
+    body = nav(L, "refund")
+    body += f"""
+  <main class="legal-page">
+    <div class="container">
+      <a href="{path_of(code, 'pro')}" class="back-nav">{BACK_ARROW}{t['back']}</a>
+
+      <div class="legal-header">
+        <h1>{t['h1']}</h1>
+        <div class="meta">
+          <span>{t['effective']}</span>
+          <span>{t['updated']}</span>
+          <span>DevAndRepair</span>
+        </div>
+      </div>
+
+      <div class="legal-body">
+        <div class="note-box">
+          <p>{t['note']}</p>
+        </div>
+
+{secs}{prevails}
+      </div>
+    </div>
+  </main>
+
+"""
+    return h + body + footer(L, "refund")
+
+
+NAV_PRICING_RE = re.compile(r'<a href="(/(?:fr/)?)#pricing">(?:Pricing|Tarifs)</a>|<a href="#pricing">(?:Pricing|Tarifs)</a>')
+
+
+def patch_sales(code, page, s):
+    """Pro link in the menu, Refunds in the footer, and (fr) the legal + price edits. Idempotent."""
+    pro = path_of(code, "pro")
+    s = NAV_PRICING_RE.sub(f'<a href="{pro}">{W[code]["nav_pro"]}</a>', s)
+    if path_of(code, "refund") not in s.split("<footer>")[1]:
+        s = re.sub(
+            r'(<li><a href="[^"]*terms\.html">[^<]*</a></li>)(\s*<li><a href="[^"]*support\.html">)',
+            lambda m: m.group(1) + f'\n        <li><a href="{path_of(code, "refund")}">{W[code]["nav_refunds"]}</a></li>' + m.group(2),
+            s, count=1,
+        )
+    if code == "fr" and page in ("privacy", "terms"):
+        lg = LEGAL["fr"][page]
+        m = re.search(r'(<div class="legal-body">)(.*?)(\n      </div>\n    </div>\n  </main>)', s, re.S)
+        inner = m.group(2)
+        inner = apply_privacy(inner, lg) if page == "privacy" else apply_terms(inner, lg)
+        s = s[:m.start(2)] + inner + s[m.end(2):]
+        s = re.sub(r"Dernière mise à jour(?: |&nbsp;): [^<]*", "Dernière mise à jour&nbsp;: 10 novembre 2026", s, count=1)
+    if page == "index":
+        h = W[code]["home"]
+        s = re.sub(r'(<div class="plan">\s*<div class="plan-name">[^<]*</div>\s*<div class="plan-price mono">)[^<]*(</div>)',
+                   lambda m: m.group(1) + h["free_price"] + m.group(2), s, count=1)
+    if page == "index" and 'class="android-cta"' not in s:
+        h = W[code]["home"]
+        s = re.sub(r'(<div class="plan pro">.*?<div class="plan-price mono">).*?(</div>\s*<div class="plan-sub">).*?(</div>)',
+                   lambda m: m.group(1) + f'{h["price"]}<span>{h["per"]}</span>' + m.group(2) + h["sub"] + m.group(3), s, count=1, flags=re.S)
+        s = re.sub(r'(<div class="plan pro">.*?</ul>)',
+                   lambda m: m.group(1) + f'\n          <a class="android-cta" href="{pro}">{h["android_cta"]} <span aria-hidden="true">&rarr;</span></a>', s, count=1, flags=re.S)
+        s = re.sub(r'(<p class="price-note">)(.*?)(</p>)', lambda m: m.group(1) + home_price_note(code, m.group(2)) + m.group(3), s, count=1, flags=re.S)
+    return s
 
 
 # ---------------------------------------------------------------- patch en / fr
@@ -473,6 +801,7 @@ def patch_existing(code, page):
     s = _patch_block(s, NAV_BLOCK, "lang-nav", switcher_nav(code, page, PATCH_LABELS[code]), OLD_LI, _place_nav)
     s = _patch_block(s, MOB_BLOCK, "lang-mobile", switcher_mobile(code, page), OLD_A, _place_mobile)
     s = _patch_block(s, FOOT_BLOCK, "lang-foot", switcher_foot(code, page), OLD_LI, _place_foot)
+    s = patch_sales(code, page, s)
     open(path, "w", encoding="utf-8", newline="").write(s)
     open(path, "w", encoding="utf-8", newline="").write(s)
 
@@ -513,14 +842,20 @@ def main():
         L = importlib.import_module(f"i18n.{code}").L
         assert L["code"] == code
         os.makedirs(os.path.join(ROOT, code), exist_ok=True)
-        for page in PAGES:
+        for page in LEGACY_PAGES:
             html = render_index(L) if page == "index" else render_legal(L, page)
             open(os.path.join(ROOT, code, f"{page}.html"), "w", encoding="utf-8", newline="").write(html)
         print("generated", code)
     for code in ("en", "fr"):
-        for page in PAGES:
+        for page in LEGACY_PAGES:
             patch_existing(code, page)
         print("patched", code)
+    for code, _, _ in LANGS:
+        os.makedirs(os.path.join(ROOT, "" if code == "en" else code), exist_ok=True)
+        for page, render in (("pro", render_pro), ("refund", render_refund)):
+            dest = os.path.join(ROOT, "" if code == "en" else code, f"{page}.html")
+            open(dest, "w", encoding="utf-8", newline="").write(render(code))
+    print("pro + refund written for", ", ".join(c for c, _, _ in LANGS))
     write_sitemap()
     write_redirects()
     print("sitemap + redirects written")
