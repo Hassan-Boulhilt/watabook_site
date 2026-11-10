@@ -88,18 +88,11 @@ img { max-width: 100%; display: block; }
   font-size: 20px;
   color: var(--ink);
 }
+/* The app icon (assets/icon.svg): yellow engine light on navy, rounded corners built in. */
 .wordmark .mark {
   width: 28px;
   height: 28px;
-  border-radius: var(--r-md);
-  background: var(--accent);
-  color: var(--accent-ink);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-mono);
-  font-weight: 600;
-  font-size: 14px;
+  display: block;
   flex-shrink: 0;
 }
 .nav-links {

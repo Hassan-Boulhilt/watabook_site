@@ -181,6 +181,7 @@ def head(L, page, title, description, extra=""):
   <link rel="canonical" href="{url_of(code, page)}">
 {hreflang_block(page)}
 {extra}
+  <link rel="icon" type="image/svg+xml" href="/assets/icon.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
   <link rel="apple-touch-icon" href="/assets/favicon-180.png">
 
@@ -205,7 +206,7 @@ def nav(L, page, active=None, home_anchor=True):
 
     return f"""  <nav class="nav" aria-label="{n['main_aria']}">
     <div class="container">
-      <a class="wordmark" href="{home}" aria-label="{n['home_aria']}"><span class="mark">W</span>Watabook</a>
+      <a class="wordmark" href="{home}" aria-label="{n['home_aria']}"><img class="mark" src="/assets/icon.svg" alt="" width="28" height="28">Watabook</a>
       <ul class="nav-links">
         <li><a href="{feat}">{n['features']}</a></li>
         <li><a href="{pric}">{n['pricing']}</a></li>
@@ -233,7 +234,7 @@ def footer(L, page):
     n = L["nav"]
     return f"""  <footer>
     <div class="container foot-row">
-      <a class="wordmark" href="{path_of(code, 'index')}"><span class="mark">W</span>Watabook</a>
+      <a class="wordmark" href="{path_of(code, 'index')}"><img class="mark" src="/assets/icon.svg" alt="" width="28" height="28">Watabook</a>
       <ul class="foot-links">
         <li><a href="{path_of(code, 'privacy')}">{n['privacy']}</a></li>
         <li><a href="{path_of(code, 'terms')}">{n['terms']}</a></li>
