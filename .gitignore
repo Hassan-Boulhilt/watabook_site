@@ -12,3 +12,4 @@ design-canvas/watabook-marketing-site.html
 # Python bytecode from tools/build_locales.py
 __pycache__/
 *.pyc
+.impeccable/hook.cache.json

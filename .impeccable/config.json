@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "pro.html"
+        ],
+        "createdAt": "2026-11-10T00:12:49.395Z",
+        "reason": "Claude: both hits are padded by design (spec table cells 13px/18px; hidden test banner 10px block padding)"
+      }
+    ]
+  }
+}

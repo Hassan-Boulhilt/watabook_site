@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Watabook Pro for Android — Watabook</title>
+  <meta name="description" content="Get Watabook Pro for Android: yearly with a 7-day free trial, or lifetime with one payment. Pay with PayPal, get your key by email, paste it in the app.">
+  <link rel="canonical" href="https://watabook.devandrepair.com/pro">
+  <meta property="og:title" content="Watabook Pro for Android">
+  <meta property="og:description" content="Yearly with a 7-day free trial, or lifetime with one payment. Pay with PayPal, get your key by email.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://watabook.devandrepair.com/pro">
+  <meta property="og:image" content="https://watabook.devandrepair.com/assets/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="/assets/icon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+  <link rel="apple-touch-icon" href="/assets/favicon-180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <nav class="nav" aria-label="Main navigation">
+    <div class="container">
+      <a class="wordmark" href="/" aria-label="Watabook home"><img class="mark" src="/assets/icon.svg" alt="" width="28" height="28">Watabook</a>
+      <ul class="nav-links">
+        <li><a href="/#features">Features</a></li>
+        <li><a href="/pro" class="active">Pro</a></li>
+        <li><a href="/privacy.html">Privacy</a></li>
+        <li><a href="/terms.html">Terms</a></li>
+      </ul>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <div class="mobile-sheet" id="mobileSheet">
+      <a href="/#features">Features</a>
+      <a href="/pro">Pro</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+    </div>
+  </nav>
+
+  <div class="test-banner" id="testBanner" hidden>
+    <div class="container">Test mode: PayPal sandbox. No real money is charged and keys only work in test builds.</div>
+  </div>
+
+  <main class="pro-page">
+
+    <!-- Opening: what you get, and the key itself -->
+    <section class="pro-intro">
+      <div class="container">
+        <div class="pro-intro-text">
+          <h1>Watabook Pro for Android</h1>
+          <p class="lead">Pay once with PayPal. Your key arrives by email and on this page. Paste it in the app and every Pro feature unlocks, on up to three of your devices.</p>
+          <p class="ios-note">On iPhone? Get Pro inside the app instead.</p>
+        </div>
+
+        <figure class="key-plate" aria-label="Example of a Watabook Pro key">
+          <div class="key-plate-head">
+            <span>Watabook Pro</span>
+            <span class="mono">Licence key</span>
+          </div>
+          <p class="key-plate-key mono">WATA-<wbr>7K3QD-<wbr>XM2PA-<wbr>0N4RT-<wbr>9BZ1C</p>
+          <dl class="key-plate-rows">
+            <div><dt>Devices</dt><dd class="mono">up to 3</dd></div>
+            <div><dt>Works offline</dt><dd class="mono">yes</dd></div>
+            <div><dt>Account needed</dt><dd class="mono">no</dd></div>
+          </dl>
+          <figcaption>Example key. Yours is unique and comes by email.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Plans -->
+    <section class="pro-plans" id="plans" aria-labelledby="plansTitle">
+      <div class="container">
+        <h2 id="plansTitle" class="pro-h2">Choose your plan</h2>
+
+        <div class="plan-row" id="planRow">
+          <article class="plan pro buy-plan" data-sku="watabook_pro_yearly" aria-labelledby="yearlyName">
+            <span class="badge">7-day free trial</span>
+            <h3 class="plan-name" id="yearlyName">Yearly</h3>
+            <p class="plan-price mono">$7.99<span>/year</span></p>
+            <p class="plan-sub">Free for 7 days, then $7.99 each year. Cancel any time in PayPal; cancel during the trial and you pay nothing.</p>
+            <div class="pay-slot" id="paySlotYearly" aria-live="polite">
+              <p class="pay-loading">Loading PayPal…</p>
+            </div>
+          </article>
+
+          <article class="plan buy-plan" data-sku="watabook_pro_lifetime" aria-labelledby="lifetimeName">
+            <h3 class="plan-name" id="lifetimeName">Lifetime</h3>
+            <p class="plan-price mono">$19.99<span>once</span></p>
+            <p class="plan-sub">One payment. No renewals. Pro for as long as Watabook exists.</p>
+            <div class="pay-slot" id="paySlotLifetime" aria-live="polite">
+              <p class="pay-loading">Loading PayPal…</p>
+            </div>
+          </article>
+        </div>
+
+        <!-- Shown after payment -->
+        <div class="key-result" id="keyResult" hidden tabindex="-1" aria-live="polite">
+          <div class="key-result-status" id="keyStatus">Payment received. Preparing your key…</div>
+          <div class="key-result-box" id="keyBox" hidden>
+            <p class="key-result-key mono" id="keyValue"></p>
+            <button type="button" class="btn btn-secondary" id="copyKey">Copy key</button>
+          </div>
+          <p class="key-result-mail" id="keyMail" hidden></p>
+          <ol class="steps">
+            <li><span class="step-n mono">1</span><span>Open Watabook on your Android phone.</span></li>
+            <li><span class="step-n mono">2</span><span>Go to <b>Pro</b> and tap <b>I have a key</b>.</span></li>
+            <li><span class="step-n mono">3</span><span>Paste the key. The app checks it once online, then works offline.</span></li>
+          </ol>
+        </div>
+
+        <p class="plan-fine">Prices in US dollars. PayPal may convert to your currency. Secure payment by PayPal, with or without a PayPal account (card availability depends on your country). Full refund within 14 days, see the <a href="/refund.html">refund policy</a>.</p>
+      </div>
+    </section>
+
+    <!-- What Pro adds -->
+    <section class="pro-compare" aria-labelledby="compareTitle">
+      <div class="container">
+        <h2 id="compareTitle" class="pro-h2">What Pro adds</h2>
+        <div class="spec-wrap">
+          <table class="spec">
+            <thead>
+              <tr><th scope="col"><span class="sr">Feature</span></th><th scope="col">Free</th><th scope="col">Pro</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Vehicles</th><td class="mono">1</td><td class="mono">unlimited</td></tr>
+              <tr><th scope="row">Log entries, fuel and costs</th><td class="mono">unlimited</td><td class="mono">unlimited</td></tr>
+              <tr><th scope="row">Offline fault-code dictionary</th><td><svg class="tick" viewBox="0 0 16 16" aria-label="Included" role="img"><path d="M3 8.5l3 3 7-7"/></svg></td><td><svg class="tick" viewBox="0 0 16 16" aria-label="Included" role="img"><path d="M3 8.5l3 3 7-7"/></svg></td></tr>
+              <tr><th scope="row">Warning-light meanings</th><td class="mono">36</td><td class="mono">36</td></tr>
+              <tr><th scope="row">Reminders</th><td>Date and mileage</td><td>Smart, recurring</td></tr>
+              <tr><th scope="row">AI &ldquo;explain simply&rdquo; answers and voice</th><td><span class="dash" aria-label="Not included">&mdash;</span></td><td><svg class="tick" viewBox="0 0 16 16" aria-label="Included" role="img"><path d="M3 8.5l3 3 7-7"/></svg></td></tr>
+              <tr><th scope="row">Document vault with expiry alerts</th><td><span class="dash" aria-label="Not included">&mdash;</span></td><td><svg class="tick" viewBox="0 0 16 16" aria-label="Included" role="img"><path d="M3 8.5l3 3 7-7"/></svg></td></tr>
+              <tr><th scope="row">Printable maintenance PDF and cost analytics</th><td><span class="dash" aria-label="Not included">&mdash;</span></td><td><svg class="tick" viewBox="0 0 16 16" aria-label="Included" role="img"><path d="M3 8.5l3 3 7-7"/></svg></td></tr>
+              <tr><th scope="row">CSV export</th><td><svg class="tick" viewBox="0 0 16 16" aria-label="Included" role="img"><path d="M3 8.5l3 3 7-7"/></svg></td><td><svg class="tick" viewBox="0 0 16 16" aria-label="Included" role="img"><path d="M3 8.5l3 3 7-7"/></svg></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="plan-fine">AI explanations are general information, not a diagnosis. Always have a safety-critical fault checked by a professional.</p>
+      </div>
+    </section>
+
+    <!-- Questions -->
+    <section class="pro-faq" aria-labelledby="faqTitle">
+      <div class="container">
+        <h2 id="faqTitle" class="pro-h2">Good to know</h2>
+        <div class="faq-grid">
+          <div>
+            <h3>New phone?</h3>
+            <p>Use the same key. If all three places are taken, free an old device from the app, or ask for a reset link by email.</p>
+          </div>
+          <div>
+            <h3>Cancel the yearly plan</h3>
+            <p>In PayPal: Settings, Payments, Automatic payments. Your key keeps working until the end of the year you paid for.</p>
+          </div>
+          <div>
+            <h3>Refunds</h3>
+            <p>Full refund within 14 days of a payment, for any plan. After a refund the key stops working. <a href="/refund.html">Refund policy</a>.</p>
+          </div>
+          <div>
+            <h3>Already bought on Google Play?</h3>
+            <p>You keep Pro. The app still recognises your Google Play purchase; you do not need a key.</p>
+          </div>
+        </div>
+
+        <form class="lost-key" id="lostKey" novalidate>
+          <h3>Lost your key?</h3>
+          <p>Enter the email you used with PayPal. If we have a key for it, we send it again.</p>
+          <div class="lost-key-row">
+            <label class="sr" for="lostEmail">Email</label>
+            <input id="lostEmail" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+            <button type="submit" class="btn btn-secondary">Send my key</button>
+          </div>
+          <p class="lost-key-msg" id="lostMsg" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container foot-row">
+      <a class="wordmark" href="/"><img class="mark" src="/assets/icon.svg" alt="" width="28" height="28">Watabook</a>
+      <ul class="foot-links">
+        <li><a href="/privacy.html">Privacy</a></li>
+        <li><a href="/terms.html">Terms</a></li>
+        <li><a href="/refund.html">Refunds</a></li>
+        <li><a href="/support.html">Support</a></li>
+      </ul>
+      <span class="foot-copy">&copy; 2026 DevAndRepair.</span>
+    </div>
+  </footer>
+
+  <script src="/js/script.js"></script>
+  <script src="/js/pro.js"></script>
+</body>
+</html>

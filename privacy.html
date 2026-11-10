@@ -54,7 +54,7 @@
       <div class="legal-header">
         <h1>Privacy Policy</h1>
         <div class="meta">
-          <span>Last updated: 12 September 2026</span>
+          <span>Last updated: 10 November 2026</span>
           <span>DevAndRepair</span>
         </div>
       </div>
@@ -63,7 +63,8 @@
         <p>Watabook is a car-maintenance logbook. It is built to keep your data <strong>on your device</strong>.</p>
 
         <h2 id="collect">What we collect</h2>
-        <p><strong>Nothing.</strong> Watabook has no account, no sign-in, no analytics, no advertising, and no tracking. We do not have a server that stores your information.</p>
+        <p><strong>Nothing from the app.</strong> Watabook has no account, no sign-in, no analytics, no advertising, and no tracking. We do not have a server that stores what you enter in the app.</p>
+        <p>The one exception is buying Pro on this website: then we keep a small licence record, described in <a href="#web-purchase">If you buy Pro on this website</a> below.</p>
         <p>Everything you enter — vehicles, service and fuel entries, reminders, documents, fault-code history — is saved only in the app's private storage on your phone. Documents you add to the vault are encrypted on the device.</p>
 
         <h2 id="internet">When the app uses the internet</h2>
@@ -72,20 +73,31 @@
           <li><strong>&ldquo;Explain simply&rdquo; (AI):</strong> sends the fault code, your car's make, your chosen language, and a random app identifier (not linked to you) to our processing service, which asks Google Gemini for a plain-language explanation. Your name, email, or location are never sent.</li>
           <li><strong>VIN decode:</strong> sends the 17-character VIN you type to the U.S. NHTSA public vehicle database to fill in the make, model and year.</li>
           <li><strong>Purchases:</strong> subscription and restore are handled by Apple / Google billing and by RevenueCat, which receives a purchase receipt and its own anonymous identifier — not your identity.</li>
+          <li><strong>Licence key (Android, bought on this website):</strong> when you enter a key, the app sends the key and a random device identifier it created to our licence service, once to activate and then about once a month to check the key is still valid. The app sends no name, email or location.</li>
           <li><strong>Export &amp; share:</strong> when you export a CSV or PDF, or share a document, your device's own share sheet sends it wherever <em>you</em> choose. Watabook does not transmit it.</li>
         </ul>
         <p>All of these connections use HTTPS.</p>
+
+        <h2 id="web-purchase">If you buy Pro on this website</h2>
+        <p>Payments on this website are processed by <strong>PayPal</strong>. We never see or store your card or bank details. To give you a licence key, our licence service keeps:</p>
+        <ul>
+          <li>the email address PayPal gives us for your purchase, so we can send your key and help you if you lose it;</li>
+          <li>your licence key, the plan, its expiry date, and the PayPal order or subscription and payment IDs;</li>
+          <li>for each device where you activate the key: the random device identifier, an optional device name, and the activation and last-check dates.</li>
+        </ul>
+        <p>The licence service runs on Cloudflare. Key emails are sent through Resend. We use your email only for your key and for questions about your purchase, never for marketing unless you separately opt in.</p>
+        <p>We keep the licence record while your licence is valid, and afterwards as long as the law requires for accounting. You can ask us to see or delete it at <a href="mailto:hello@devandrepair.com">hello@devandrepair.com</a>; deleting it ends the licence.</p>
 
         <h2 id="control">Your control</h2>
         <ul>
           <li>Delete any entry, document, or vehicle in the app at any time.</li>
           <li>Uninstalling Watabook permanently removes all of its data from your device.</li>
-          <li>There is no server-side data to delete because we do not keep any.</li>
+          <li>The app keeps no data on our servers. If you bought Pro on this website, you can ask us to delete your licence record (see above).</li>
           <li>Export everything as CSV whenever you want — your data is never locked in.</li>
         </ul>
 
         <h2 id="children">Children</h2>
-        <p>Watabook is not directed at children and collects no data from anyone.</p>
+        <p>Watabook is not directed at children. The app collects no data from anyone; purchases on this website are for adults with a PayPal account or card.</p>
 
         <h2 id="changes">Changes</h2>
         <p>If this policy changes, the &ldquo;last updated&rdquo; date above will change and the new version will be published here.</p>
