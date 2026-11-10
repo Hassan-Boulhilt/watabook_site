@@ -489,7 +489,7 @@ footer { border-top: 1px solid var(--hairline); padding: 40px 0; }
 .mobile-sheet .lang-row a[aria-current="true"] { border-color: var(--accent); color: var(--accent); }
 
 .foot-langs { display: flex; flex-wrap: wrap; gap: 8px 18px; width: 100%; padding-top: 4px; }
-.foot-langs a { font-size: 12.5px; color: var(--ink-3); }
+.foot-langs a { font-size: 12.5px; color: var(--ink-2); }
 .foot-langs a:hover { color: var(--ink); }
 .foot-langs a[aria-current="true"] { color: var(--ink-2); font-weight: 600; }
 
